@@ -1,0 +1,130 @@
+<%
+var pageTitle = page.title || config.subtitle || '';
+if (is_archive()) pageTitle = 'Archives';
+if (is_tag()) pageTitle = 'Tag: ' + page.tag;
+if (is_category()) pageTitle = 'Category: ' + page.category;
+if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
+if (is_year()) pageTitle += ': ' + page.year;
+pageTitle += ' [ ' + config.title + ' ]';
+%>
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="ie6" lang="<%=config.language%>"><![endif]-->
+<!--[if IE 7]><html class="ie7" lang="<%=config.language%>"><![endif]-->
+<!--[if IE 8]><html class="ie8" lang="<%=config.language%>"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="<%=config.language%>"><!--<![endif]-->
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<meta charset="UTF-8">
+<title><%=pageTitle%></title>
+<meta name="keywords" content="<%=theme.keywords%>">
+<meta name="description" content="<%=pageTitle%>">
+<!--ogp-->
+<meta property="og:locale" content="ja_JP">
+<meta property="fb:admins" content="567882369988920">
+<meta property="article:publisher" content="https://www.facebook.com/cunadesign">
+<meta property="og:type" content="article">
+<meta property="og:title" content="新潟市のデザイン事務所 クーナデザイン">
+<meta property="og:url" content="http://www.cuna-design.com">
+<meta property="og:description" content="クーナデザインは、新潟を拠点に活動するデザイン事務所です。人・モノ・企業・地域のブランディングという観点から、グラフィック、Web、エディトリアルなどのデザイン活動を展開しています。">
+<meta property="og:site_name" content="新潟市のデザイン事務所 クーナデザイン">
+<meta property="og:image" content="http://www.cuna-design.com/wp-content/themes/cuna-design/img/common/img_site.jpg">
+<!--twitter cards-->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="CunaDesign">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.cuna-design.com/wp-content/themes/cuna-design/css/html5reset-1.6.1.css">
+<link rel="stylesheet" href="http://www.cuna-design.com/wp-content/themes/cuna-design/css/base.css">
+<link rel="stylesheet" href="http://www.cuna-design.com/wp-content/themes/cuna-design/css/tab.css">
+<link rel="stylesheet" href="http://www.cuna-design.com/wp-content/themes/cuna-design/css/sp.css">
+<link href='http://fonts.googleapis.com/css?family=Linden+Hill' rel='stylesheet' type='text/css'>
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.cuna-design.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.8.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js?ver=1.9.1'></script>
+<link rel='canonical' href='http://www.cuna-design.com/profile' />
+<script src="http://www.cuna-design.com/wp-content/themes/cuna-design/js/common.js"></script>
+<script src="http://www.cuna-design.com/wp-content/themes/cuna-design/js/jquery.ba-throttle-debounce.min.js"></script>
+<script src="http://www.cuna-design.com/wp-content/themes/cuna-design/js/mail.js"></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-42217271-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
+  <!-- stylesheets list from _config.yml -->
+  <% theme.stylesheets.forEach(url => { %>
+    <link rel="stylesheet" href="<%=url%>">
+  <% }); %>
+<% } %>
+</head>
+<body class="page page-id-52 page-template page-template-profile-php non-home">
+
+<!--====================================================================
+  header
+====================================================================-->
+<header id="header" class="inner">
+
+<!-- top main image / site logo
+====================================================================-->
+<h1 id="logoSite">
+  <a href="/">
+    <img src="<%=theme.logo%>" width="126" alt="<%=theme.title%>" class="hoverImage">
+  </a>
+</h1>
+
+<!-- local navi
+====================================================================-->
+<nav id="lnav">
+<ul>
+  <!--<li><a href="https://twitter.com/CunaDesign" target="_blank"><img src="http://www.cuna-design.com/wp-content/themes/cuna-design/img/common/icn_twitter_2x.gif" width="23" alt="Twitter" class="hoverImage"></a></li>-->
+  <li><a href="https://www.facebook.com/cunadesign" target="_blank"><img src="http://www.cuna-design.com/wp-content/themes/cuna-design/img/common/icn_facebook_2x.gif" width="23" alt="Facebook" class="hoverImage"></a></li>
+</ul>
+</nav>
+
+<!-- global navi button
+====================================================================-->
+<p id="btnGnav"><img src="http://www.cuna-design.com/wp-content/themes/cuna-design/img/common/btn_gnav_2x.gif" width="21"></p>
+</header><!--/#header-->
+
+<!-- global navi
+====================================================================-->
+<nav id="gnav" class="clearfix">
+<ul class="inner">
+  <% var n = 0; %>
+  <% Object.keys(theme.menu).forEach(key => { %>
+  <li id="gnav<%=++n%>"><a href="<%=theme.menu[key]%>"><%=key%></a></li>
+  <% }); %>
+</ul>
+</nav><!--/#gnav-->
+
+<%- body %>
+
+
+<!--====================================================================
+  footer
+====================================================================-->
+<footer id="footer" class="wrap">
+<div class="inner">
+
+<!-- page top button
+====================================================================-->
+<p id="pagetop"><a href="#header"><img src="http://www.cuna-design.com/wp-content/themes/cuna-design/img/common/btn_pagetop_2x.png" width="62" alt="Page top"></a></p>
+
+<!-- copyright
+====================================================================-->
+<p id="copyright"><small>&copy; <%=theme.title%><span> All Rights Reserved.</span></small></p>
+</div><!--/.Inner-->
+</footer><!--/#footer-->
+
+<% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
+  <!-- scripts list from theme config.yml -->
+  <% theme.scripts.forEach(url => { %>
+    <script src="<%=url%>"></script>
+  <% }); %>
+<% } %>
+</body>
+</html>
