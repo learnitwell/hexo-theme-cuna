@@ -1,6 +1,52 @@
+<section id="listBlog" class="wrap">
+<div class="inner singleColList">
+<header>
+  <h1 class="ttlContents"><a href="http://www.cuna-design.com/blog"><img src="http://www.cuna-design.com/wp-content/themes/cuna-design/img/blog/ttl_page_2x.jpg" width="285" alt="BLOG ブログ" class="hoverImage"></a></h1>
+</header>
 
-<%-partial('partials/recent-posts')%>
+<!-- blog nav
+====================================================================-->
+<nav id="catNav">
+<ul>
+      <li>All</li>
+        <li><a href="http://www.cuna-design.com/archives/category/info/">Info</a></li>
+        <li><a href="http://www.cuna-design.com/archives/category/work/">Work</a></li>
+        <li><a href="http://www.cuna-design.com/archives/category/journal/">Journal</a></li>
+  </ul>
+</nav>
 
-<div id="paginator">
-  <%-paginator()%>
-</div>
+<!-- blog list
+====================================================================-->
+<section id="listBlog" class="colMiddle">
+<% if (page.posts.length > 0) { %>
+<% page.posts.sort('date', -1).limit(10).each(post => { %>
+<article class="clearfix">
+  <a href="<%=url_for(post.path)%>">
+  <p class="thumb bwWrapper">
+    <% if (post.cover) { %>
+    <img width="327" height="218" src="<%=post.cover%>" class="attachment-blog_thumb wp-post-image" alt="newyear_2019_main">
+    <% } %>
+  </p>
+  <div class="boxTxt <% if (!post.cover) { %>noCover<% } %>">
+  <h1><%=post.title%></h1>
+  <% var content = excerpt(post.content, 90); %>
+  <p class="txt"><%=content%></p>
+  <time><%=date(post.date)%></time>
+    <p class="cat">Info</p>
+  </div>
+  </a>
+</article><!--/article-->
+<% }); %>
+<% } %>
+</section><!--/.colMiddle-->
+
+<!-- page navi
+====================================================================-->
+<nav id="pageNav">
+<ul>
+  <li></li><!--
+  --><li></li>
+</ul>
+</nav>
+</div><!--/.Inner-->
+</section>

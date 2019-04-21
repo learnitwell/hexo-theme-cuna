@@ -1,0 +1,8 @@
+.singleColList article .noCover {
+  width: 100% !important;
+  margin-left: 0 !important;
+}
+
+.singleColList article .thumb img {
+  height: 160px !important;
+}
