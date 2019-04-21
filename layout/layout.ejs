@@ -32,10 +32,6 @@ pageTitle += ' [ ' + config.title + ' ]';
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="CunaDesign">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://www.cuna-design.com/wp-content/themes/cuna-design/css/html5reset-1.6.1.css">
-<link rel="stylesheet" href="http://www.cuna-design.com/wp-content/themes/cuna-design/css/base.css">
-<link rel="stylesheet" href="http://www.cuna-design.com/wp-content/themes/cuna-design/css/tab.css">
-<link rel="stylesheet" href="http://www.cuna-design.com/wp-content/themes/cuna-design/css/sp.css">
 <link href='http://fonts.googleapis.com/css?family=Linden+Hill' rel='stylesheet' type='text/css'>
 <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <link rel='stylesheet' id='contact-form-7-css'  href='http://www.cuna-design.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.8.1' type='text/css' media='all' />
@@ -93,7 +89,7 @@ ga('send', 'pageview');
 <!-- global navi
 ====================================================================-->
 <nav id="gnav" class="clearfix">
-<ul class="inner">
+<ul class="inner flex">
   <% var n = 0; %>
   <% Object.keys(theme.menu).forEach(key => { %>
   <li id="gnav<%=++n%>"><a href="<%=theme.menu[key]%>"><%=key%></a></li>

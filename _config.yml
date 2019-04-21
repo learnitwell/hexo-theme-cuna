@@ -11,8 +11,11 @@ menu:
 
 # stylesheets loaded in the <head>
 stylesheets:
+- /css/reset.css
+- /css/common.css
+- /css/tab.css
+- /css/sp.css
 - /css/style.css
-- /css/cuna.css
 
 # scripts loaded in the end of the body
 scripts:

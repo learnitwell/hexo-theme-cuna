@@ -1,9 +1,23 @@
-
-<article id="post">
-  <h1><%=page.title%></h1>
-  <%-page.content%>
-</article>
+<section id="post">
+	<div class="inner">
+		<header>
+			<h1 class="ttlContents">
+				<a href="http://www.cuna-design.com/blog">
+					<img src="http://www.cuna-design.com/wp-content/themes/cuna-design/img/blog/ttl_page_2x.jpg"
+						width="285" alt="BLOG ブログ" class="hoverImage">
+				</a>
+			</h1>
+		</header>
+		<article class="colMiddle">
+			<header>
+				<time>2019.01.04</time>
+				<h1><%=page.title%></h1>
+			</header>
+			<%-page.content%>
+		</article>
+	</div>
+</section>
 
 <div id="paginator">
-  <%-paginator()%>
+	<%-paginator()%>
 </div>
