@@ -1,8 +1,6 @@
-# Landscape
-
-A brand new default theme for [Hexo].
-
-- [Preview](http://hexo.io/hexo-theme-landscape/)
+# cuna
+![list][2]
+![detail][1]
 
 ## Installation
 
@@ -36,3 +34,5 @@ menu:
 rss: /atom.xml
 
 ```
+[1]: http://static.zybuluo.com/gyyin/ysvzng8n38ilnvkq7fe08ij4/image_1d91e8t1b1avlbvqa5r1bsc1ua9.png
+[2]: http://static.zybuluo.com/gyyin/llpuemm5v3abz02nggu08vek/image_1d91efpj37k21ccfrel1pmdm2dm.png

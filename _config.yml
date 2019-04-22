@@ -5,9 +5,9 @@ language: en
 # main menu navigation
 menu:
   Home: /
-  About: /about
-  Contact: /contact
+  Category: /category
   Archives: /archives
+  About: /about
 
 # stylesheets loaded in the <head>
 stylesheets:
