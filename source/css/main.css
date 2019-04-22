@@ -1,0 +1,264 @@
+@charset "UTF-8";
+
+/*/////////////////////////////////////////////////////////////////////
+
+	base css
+
+----------------------------------------------------------------
+
+	- common
+	- base layout
+	- contents
+	- top
+	- list
+	- detail
+	- other page
+
+/////////////////////////////////////////////////////////////////////*/
+
+/*--------------------------------------------------------------
+	common
+--------------------------------------------------------------*/
+
+body {
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	font-size: 13px;
+	letter-spacing: 0.02em;
+	line-height: 1.7;
+	text-align: center;
+	-webkit-text-size-adjust: 100%;
+	position: relative;
+}
+
+/* link */
+a {
+	outline: none;
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover img.hoverImage {
+	opacity: 0.7;
+	filter: alpha(opacity=70);        /* IE7以下 */
+	-ms-filter: "alpha(opacity=70)";  /* IE8 */
+	-webkit-transition: 0.1s ease-out;
+	-moz-transition: 0.1s ease-out;
+	-o-transition: 0.1s ease-out;
+	transition: 0.1s ease-out;
+}
+/* layout */
+#header {
+	height: 165px;
+	position: relative;
+}
+#header #logoSite {
+    margin-top: 25px;
+}
+#header #lnav {
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+#header #lnav ul li {
+    margin-left: 6px;
+    float: right;
+    display: inline;
+}
+#header #btnGnav {
+    display: none;
+}
+#gnav {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    margin-top: -40px;
+    z-index: 1;
+    left: 0;
+}
+#gnav ul li {
+    margin-right: 1.0204%;
+}
+#gnav ul li a {
+    padding: 9px 0 5px;
+    display: block;
+    border-bottom: 1px solid #dddddd;
+    font-family: 'Linden Hill', serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 25px;
+}
+#gnav ul li a:hover {
+    padding-bottom: 4px;
+    border-bottom: 2px solid #000;
+    -webkit-transition: 0.1s ease-out;
+    -moz-transition: 0.1s ease-out;
+    -o-transition: 0.1s ease-out;
+    transition: 0.1s ease-out;
+}
+#footer {
+    background-color: #000;
+    color: #fff;
+}
+#footer #pagetop {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 2;
+}
+#footer #copyright {
+    font-family: 'Linden Hill', serif;
+    font-size: 15px;
+    line-height: 50px;
+}
+/* 列表页 */
+#catNav {
+    margin-bottom: 45px;
+}
+#catNav ul li {
+    margin-left: 2.551%;
+    display: inline;
+    font-family: 'Linden Hill', serif;
+    font-size: 17px;
+    line-height: 1.5;
+}
+#catNav ul li:not(:first-child):before {
+    content: "/";
+    margin-right: 2.551%;
+    color: #7b7b7b;
+}
+#catNav ul li a {
+    color: #7b7b7b;
+}
+.singleColList article .thumb {
+    width: 32.0588%;
+    float: left;
+    display: inline;
+}
+.bwWrapper {
+    position: relative;
+    display: block;
+}
+.singleColList article .thumb img {
+    width: 100%;
+    height: auto;
+}
+.singleColList article .boxTxt {
+    width: 64.2647%;
+    margin-left: 3.6764%;
+    float: left;
+    display: inline;
+    text-align: left;
+}
+.singleColList article .boxTxt h1 {
+    padding-top: 15px;
+    margin-bottom: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+.singleColList article .boxTxt .txt {
+    margin-bottom: 5px;
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: justify;
+}
+.singleColList article .boxTxt time {
+    margin-right: 0.5em;
+    float: left;
+    line-height: 1.4;
+    color: #7b7b7b;
+}
+.singleColList article .boxTxt .cat {
+    line-height: 1.4;
+    color: #7b7b7b;
+}
+.singleColList article .noCover {
+    width: 100% !important;
+    margin-left: 0 !important;
+}
+.singleColList article {
+    margin-bottom: 40px;
+}
+#pageNav {
+    width: 100%;
+    margin-bottom: 100px;
+    padding-top: 40px;
+    clear: both;
+}
+/* 详情页 */
+#detailBlog .colMiddle {
+    text-align: left;
+}
+#detailBlog .colMiddle header time {
+    margin-bottom: 10px;
+    float: left;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #7b7b7b;
+}
+#detailBlog .colMiddle .btnSNS li {
+    margin-left: 2px;
+    float: right;
+    display: inline;
+}
+#detailBlog .colMiddle .btnSNS li.btnTwitter {
+    width: 100px;
+}
+#detailBlog .colMiddle header h1 {
+    margin-bottom: 30px;
+    clear: left;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+#detailBlog .colMiddle .photo {
+    margin-bottom: 30px;
+}
+#detailBlog .colMiddle .photo img {
+    width: 100%;
+    height: auto;
+}
+#detailBlog .colMiddle .content {
+    font-size: 15px;
+    line-height: 2.2;
+}
+#detailBlog .colMiddle .content h2 {
+	font-size: 20px;
+}
+#detailBlog .colMiddle .content h3 {
+	font-size: 16px;
+}
+#detailBlog .colMiddle .content p {
+    margin-bottom: 2em;
+}
+#detailBlog .colMiddle .content img {
+    max-width: 100%;
+}
+#detailBlog .colMiddle .data {
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+#detailBlog .colMiddle .data time {
+    margin: 0 0.5em 5px 0;
+    float: left;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #7b7b7b;
+}
+#detailBlog .colMiddle .data .cat {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #7b7b7b;
+}
+#pageNav ul li {
+    margin: 0 1.5306%;
+    display: inline;
+}
+#pageNav ul li a {
+    padding: 0.4em 1em 0.2em;
+    display: inline-block;
+    background-color: #000;
+    font-family: 'Linden Hill', serif;
+    font-size: 16px;
+    color: #fff;
+}

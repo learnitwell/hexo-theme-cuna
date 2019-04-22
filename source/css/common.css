@@ -11,3 +11,105 @@
     flex: 1;
     width: 1%;
 }
+/* 清除浮动 */
+.clearfix {
+    display: block;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.wrap {
+    background-color: #F7F7F7;
+}
+.inner {
+    max-width: 980px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.ttlContents {
+    margin-bottom: 60px;
+    padding-top: 80px;
+}
+.colMiddle {
+    width: 69.3877%;
+    margin: 0 auto;
+}
+/* 代码高亮 */
+pre .ruby .class .title, pre .css .rules .attribute, pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata, pre .special, pre .number, pre .formula {
+    color: #b5bd68;
+}
+pre .keyword, pre .javascript .function {
+    color: #b294bb;
+}
+pre .title, pre .css .hexcolor {
+    color: #8abeb7;
+}
+pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant, pre .command {
+    color: #de935f;
+}
+.highlight {
+    border-radius: 1px;
+}
+.highlight table {
+    margin: 0;
+    width: auto;
+    border: none;
+}
+table>tbody>tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+.highlight td {
+    border: none;
+    padding: 0;
+}
+.gutter {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.highlight .gutter pre {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #888f96;
+    text-align: right;
+    background-color: #000;
+}
+.highlight pre {
+    border: none;
+    margin: 0;
+    padding: 10px 0;
+}
+pre, code {
+    font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
+}
+pre, .highlight {
+    overflow: auto;
+    margin: 20px 0;
+    padding: 0;
+    font-size: 13px;
+    color: #c5c8c6;
+    background: #1d1f21;
+    line-height: 1.6;
+}
+code, kbd, pre, samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+pre {
+    overflow: auto;
+}
+pre, xmp, plaintext, listing {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0px;
+}
+.highlight .line {
+    height: 20px;
+}
+pre .comment {
+    color: #969896;
+}

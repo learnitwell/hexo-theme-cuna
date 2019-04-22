@@ -12,10 +12,11 @@ menu:
 stylesheets:
 - /css/reset.css
 - /css/common.css
-- /css/tab.css
-- /css/sp.css
-- /css/style.css
+- /css/main.css
 
 # scripts loaded in the end of the body
 scripts:
 - /js/cuna.js
+
+logo: ./images/cuna.gif
+  

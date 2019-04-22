@@ -6,11 +6,13 @@
 <header>
 <h1 class="ttlContents"><%=page.title%></h1>
 </header>
-<p class="imgProfile"><img src="<%=theme.logo%>" width="490" alt=""></p>
-<div class="colHalfR">
+<div class="colHalfR" id="colHalfR">
 <p class="title"></p>
 <h2><%=theme.author%><span><%=theme.tags%></span></h2>
 <p class="text"><%-page.content%></p>
 </div>
+<p class="imgProfile" id="imgProfile">
+    <img src="<%=theme.logo%>" width="490" alt="">
+  </p>
 </div><!--/.Inner-->
 </section><!--/.wrap-->
