@@ -1092,6 +1092,9 @@ a:hover img.hoverImage {
     font-weight: bold;
     line-height: 1.4;
 }
+#post h2 {
+	font-size: 20px;
+}
 #post header time {
     margin-bottom: 10px;
     float: left;
