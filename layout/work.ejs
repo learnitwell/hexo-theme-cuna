@@ -1,0 +1,44 @@
+<section id="works" class="wrap">
+<div class="inner colList3 multiColList">
+<header>
+<h1 class="ttlContents"><a href="http://www.cuna-design.com/archives/works"><img src="http://www.cuna-design.com/wp-content/themes/cuna-design/img/works/ttl_page_2x.jpg" width="285" alt="WORKS 制作実績" class="hoverImage"></a></h1>
+</header>
+
+<!-- blog nav
+====================================================================-->
+
+<!--====================================================================
+  work list
+====================================================================-->
+<div class="clearfix">
+<% for (var name in site.data.works) { %>
+<% var work = site.data.works[name]; %>
+<article class="count1">
+    <a href="http://www.cuna-design.com/archives/works/takakuwa-dental-hp">
+  <p class="thumb bwWrapper"><img width="444" height="296" src="http://www.cuna-design.com/wp-content/uploads/2019/03/takakuwa_dental_site_thumb_mod1-444x296.jpg" class="attachment-work_thumb wp-post-image" alt="高桑歯科医院・ホームページ"></p>
+  <h1><%=work.title%></h1>
+  <p class="service"><%=work.intro%></p>
+  </a>
+</article><!--/article-->
+<% } %>
+</div><!--/.clearfix-->
+
+<!-- page navi
+====================================================================-->
+<nav id="pageNav">
+<ul>
+  <li></li><!--
+  --><li><a href="http://www.cuna-design.com/archives/works/page/2">NEXT →</a></li>
+</ul>
+</nav>
+
+<!-- other works
+====================================================================-->
+<!--<aside id="closed_works">
+<p>他にも制作実績がございます。<br><span>ご覧になりたい方は、</span><span><a href="http://www.cuna-design.com/contact">CONTACT</a>よりお問い合わせください。</span></p>
+</aside>-->
+
+
+
+</div><!--/.Inner-->
+</section>

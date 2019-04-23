@@ -6,6 +6,7 @@ language: en
 menu:
   首页: /
   博客: /archives
+  作品: /works
   关于: /about
 
 # stylesheets loaded in the <head>
@@ -18,5 +19,5 @@ stylesheets:
 scripts:
 - /js/cuna.js
 
-logo: ./images/cuna.gif
+logo: /images/cuna.gif
   
